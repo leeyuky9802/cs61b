@@ -36,16 +36,20 @@ public class LinkedListDeque<bala> {
         else return true;
     }
 
-    public void removeFirst(){
+    public bala removeFirst(){
+        bala temp = sentinal.next.item;
         sentinal.next=sentinal.next.next;
         sentinal.next.prev=sentinal;
         size--;
+        return temp;
     }
 
-    public void removeLast(){
+    public bala removeLast(){
+        bala temp = sentinal.next.item;
         sentinal.prev=sentinal.prev.prev;
         sentinal.prev.next=sentinal;
         size--;
+        return temp;
     }
 
     public int size(){
