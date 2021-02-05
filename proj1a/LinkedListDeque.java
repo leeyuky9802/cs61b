@@ -52,6 +52,22 @@ public class LinkedListDeque<bala> {
         return temp;
     }
 
+    public bala get(int index){
+        Node op = sentinel.next;
+        for(int i=0;i<index;i++){
+            op = op.next;
+        }
+        return op.item;
+    }
+
+    public bala getRecursive(int index){
+        Node op = sentinel.next;
+        for(int i=0;i<index;i++){
+            op = op.next;
+        }
+        return op.item;
+    }
+
     public int size(){
         return size;
     }
@@ -63,6 +79,4 @@ public class LinkedListDeque<bala> {
             p=p.next;
         }
     }
-    //hahaha
-    //hahaha
 }
