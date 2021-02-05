@@ -11,23 +11,23 @@ public class LinkedListDeque<bala> {
             prev=pr;
         }
     }
-    Node sentinal = new Node(null,null,null);
+    Node sentinel = new Node(null,null,null);
     private int size=0;
 
     LinkedListDeque(){
-        sentinal.prev=sentinal;
-        sentinal.next=sentinal;
+        sentinel.prev= sentinel;
+        sentinel.next= sentinel;
     }
 
     public void addFirst(bala item){
-        sentinal.next = new Node(item,sentinal.next,sentinal);
-        sentinal.next.next.prev=sentinal.next;
+        sentinel.next = new Node(item, sentinel.next, sentinel);
+        sentinel.next.next.prev= sentinel.next;
         size++;
     }
 
     public void addLast(bala item){
-        sentinal.prev = new Node(item,sentinal,sentinal.prev);
-        sentinal.prev.prev.next=sentinal.prev;
+        sentinel.prev = new Node(item, sentinel, sentinel.prev);
+        sentinel.prev.prev.next= sentinel.prev;
         size++;
     }
 
@@ -37,17 +37,17 @@ public class LinkedListDeque<bala> {
     }
 
     public bala removeFirst(){
-        bala temp = sentinal.next.item;
-        sentinal.next=sentinal.next.next;
-        sentinal.next.prev=sentinal;
+        bala temp = sentinel.next.item;
+        sentinel.next= sentinel.next.next;
+        sentinel.next.prev= sentinel;
         size--;
         return temp;
     }
 
     public bala removeLast(){
-        bala temp = sentinal.next.item;
-        sentinal.prev=sentinal.prev.prev;
-        sentinal.prev.next=sentinal;
+        bala temp = sentinel.next.item;
+        sentinel.prev= sentinel.prev.prev;
+        sentinel.prev.next= sentinel;
         size--;
         return temp;
     }
@@ -57,8 +57,8 @@ public class LinkedListDeque<bala> {
     }
 
     public void printDeque(){
-        Node p = sentinal.next;
-        while(p!=sentinal){
+        Node p = sentinel.next;
+        while(p!= sentinel){
             System.out.print(p.item+" ");
             p=p.next;
         }
