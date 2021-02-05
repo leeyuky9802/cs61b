@@ -63,4 +63,5 @@ public class LinkedListDeque<bala> {
             p=p.next;
         }
     }
+    //hahaha
 }
