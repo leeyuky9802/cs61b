@@ -1,3 +1,5 @@
+import org.junit.Test;
+
 /** Performs some basic linked list tests. */
 public class LinkedListDequeTest {
 	
@@ -61,6 +63,7 @@ public class LinkedListDequeTest {
 	}
 
 	/** Adds an item, then removes an item, and ensures that dll is empty afterwards. */
+	@Test
 	public static void addRemoveTest() {
 
 		System.out.println("Running add/remove test.");
